@@ -12,12 +12,10 @@ namespace Producer
 
 
         private readonly string _storageFolder;
-        public string UrlBroker { get; set; }
-        public static int messageLifeTime = Properties.Settings.Default.MessageLifeTime;
+        public static int messageLifeTime = Properties.Settings.Default.messageLifeTime;
 
-        public Producer(string uRLbroker, string storageFolder)
+        public Producer( string storageFolder)
         {
-            UrlBroker = uRLbroker;
             _storageFolder = storageFolder;
             //----------------------------------------------------------------------------------------------------
 
@@ -42,7 +40,7 @@ namespace Producer
 
         internal void CleanQueue()
         {
-            DateTime dt = DateTime.Now.AddMinutes(-messageLifeTime);
+            DateTime dt = DateTime.Now.AddMinutes(-messageLifeTime); // minutes
             var oldfiles =  Directory.GetFiles(_storageFolder, "*.*").Where(x => new FileInfo(x).CreationTime < dt).ToList();
             if (oldfiles.Count > 0)
             {

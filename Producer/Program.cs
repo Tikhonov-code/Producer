@@ -11,9 +11,9 @@ namespace Producer
     {
         static void Main(string[] args)
         {
-            Producer producer = new Producer(Properties.Settings.Default.URLbroker,Properties.Settings.Default.StorageFolder);
+            Producer producer = new Producer(Properties.Settings.Default.StorageFolder);
             List<string> fileNames;
-            int timeInterval = 3000; //ms
+            int timeInterval = Properties.Settings.Default.timeInterval; //ms
             do
             {
                 producer.CleanQueue();

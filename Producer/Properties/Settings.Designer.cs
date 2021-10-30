@@ -25,7 +25,7 @@ namespace Producer.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\\\Users\\\\tix19\\\\source\\\\repos\\\\myExchange\\\\myExchange\\\\Storage")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\\\Users\\\\tix19\\\\source\\\\repos\\\\Exch\\\\Exch\\\\Storage")]
         public string StorageFolder {
             get {
                 return ((string)(this["StorageFolder"]));
@@ -34,19 +34,22 @@ namespace Producer.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:5000/api/Exchange/")]
-        public string URLbroker {
+        [global::System.Configuration.DefaultSettingValueAttribute("3000")]
+        public int timeInterval {
             get {
-                return ((string)(this["URLbroker"]));
+                return ((int)(this["timeInterval"]));
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1")]
-        public int MessageLifeTime {
+        public int messageLifeTime {
             get {
-                return ((int)(this["MessageLifeTime"]));
+                return ((int)(this["messageLifeTime"]));
+            }
+            set {
+                this["messageLifeTime"] = value;
             }
         }
     }
