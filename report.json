@@ -1,6 +1,5 @@
 {
     {
-       "id":17,
        "customer":"Afanasy Gobber",
        "dateOfCall":"02-03-2020",
        "timeOfCall":"10:00:00",
@@ -8,7 +7,6 @@
        "description":"xxxxxxxxxx"
     },
     {
-       "id":18,
        "customer":"Spensor White",
        "dateOfCall":"10-10-2022",
        "timeOfCall":"03:00:00",
@@ -16,7 +14,6 @@
        "description":"ddddddddddddd"
     },
     {
-       "id":15,
        "customer":"Watson Bey",
        "dateOfCall":"01-01-2023",
        "timeOfCall":"05:00:00",
@@ -24,7 +21,6 @@
        "description":"test 555"
     },
     {
-       "id":14,
        "customer":"Boban Tossy",
        "dateOfCall":"05-05-2023",
        "timeOfCall":"14:22:00",
@@ -32,7 +28,6 @@
        "description":"zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
     },
     {
-       "id":12,
        "customer":"Mathwey Top",
        "dateOfCall":"05-05-2023",
        "timeOfCall":"10:00:00",
@@ -40,7 +35,6 @@
        "description":"hello 4444"
     },
     {
-       "id":16,
        "customer":"Mathwey Top",
        "dateOfCall":"05-05-2023",
        "timeOfCall":"03:00:00",
