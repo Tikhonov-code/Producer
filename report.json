@@ -1,44 +1,67 @@
 {
-    {
-       "customer":"Afanasy Gobber",
-       "dateOfCall":"02-03-2020",
-       "timeOfCall":"10:00:00",
-       "subject":"lane",
-       "description":"xxxxxxxxxx"
-    },
-    {
-       "customer":"Spensor White",
-       "dateOfCall":"10-10-2022",
-       "timeOfCall":"03:00:00",
-       "subject":"aga",
-       "description":"ddddddddddddd"
-    },
-    {
-       "customer":"Watson Bey",
-       "dateOfCall":"01-01-2023",
-       "timeOfCall":"05:00:00",
-       "subject":"OK",
-       "description":"test 555"
-    },
-    {
-       "customer":"Boban Tossy",
-       "dateOfCall":"05-05-2023",
-       "timeOfCall":"14:22:00",
-       "subject":"question",
-       "description":"zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
-    },
-    {
-       "customer":"Mathwey Top",
-       "dateOfCall":"05-05-2023",
-       "timeOfCall":"10:00:00",
-       "subject":"Test",
-       "description":"hello 4444"
-    },
-    {
-       "customer":"Mathwey Top",
-       "dateOfCall":"05-05-2023",
-       "timeOfCall":"03:00:00",
-       "subject":"Request",
-       "description":"hello 1111111111"
-    }
+	"name": "json-file-plus",
+	"version": "3.3.1",
+	"author": {
+		"name": "Jordan Harband",
+		"email": "ljharb@gmail.com",
+		"url": "http://ljharb.codes"
+	},
+	"funding": {
+		"url": "https://github.com/sponsors/ljharb"
+	},
+	"contributors": [
+		{
+			"name": "Jordan Harband",
+			"email": "ljharb@gmail.com",
+			"url": "http://ljharb.codes"
+		}
+	],
+	"description": "Read from and write to a JSON file, minimizing diffs and preserving formatting.",
+	"license": "MIT",
+	"main": "index.js",
+	"scripts": {
+		"prepublishOnly": "safe-publish-latest",
+		"prepublish": "not-in-publish || npm run prepublishOnly",
+		"pretest": "npm run lint",
+		"test": "npm run tests-only",
+		"tests-only": "nyc tape 'test/**/*.js'",
+		"posttest": "aud --production",
+		"prelint": "evalmd README.md",
+		"lint": "eslint --ext=js,mjs ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/ljharb/json-file-plus.git"
+	},
+	"keywords": [
+		"json",
+		"json file",
+		"formatting",
+		"read",
+		"write",
+		"promise",
+		"promiseback"
+	],
+	"dependencies": {
+		"is": "^3.3.0",
+		"node.extend": "^2.0.2",
+		"object.assign": "^4.1.4",
+		"promiseback": "^2.0.3",
+		"safer-buffer": "^2.1.2"
+	},
+	"devDependencies": {
+		"@ljharb/eslint-config": "^21.0.0",
+		"aud": "^1.1.5",
+		"eslint": "=8.8.0",
+		"evalmd": "^0.0.19",
+		"for-each": "^0.3.3",
+		"has": "^1.0.3",
+		"nyc": "^10.3.2",
+		"object-keys": "^1.1.1",
+		"safe-publish-latest": "^2.0.0",
+		"tape": "^5.6.1"
+	},
+	"engines": {
+		"node": ">= 0.4"
+	}
 }
